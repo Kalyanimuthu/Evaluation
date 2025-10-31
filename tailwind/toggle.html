@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Dark Mode Toggle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 space-y-10">
+
+    <h1 class="text-4xl font-bold">Dark Mode Toggle</h1>
+    <p class="text-center max-w-md text-gray-700 dark:text-gray-300">
+      Toggle between light and dark themes using Tailwind’s <span class="font-mono">dark:</span> variant.
+    </p>
+
+    <!-- Toggle Switch -->
+    <div class="flex items-center space-x-3">
+      <span class="text-gray-700 dark:text-gray-300 text-xl">🌞</span>
+      <button id="toggleTheme" class="relative w-16 h-8 bg-gray-300 dark:bg-gray-700 rounded-full shadow-inner transition-colors duration-300 focus:outline-none">
+        <span class="absolute top-0.5 left-0.5 w-7 h-7 bg-white rounded-full shadow transform transition-transform duration-300" id="toggleKnob"></span>
+      </button>
+      <span class="text-gray-700 dark:text-gray-300 text-xl">🌙</span>
+    </div>
+
+    <!-- Sample content card -->
+    <div class="p-8 rounded-xl bg-gray-100 dark:bg-gray-800 shadow-md max-w-lg w-full transition-colors duration-500">
+      <p class="text-gray-700 dark:text-gray-300">
+        This card automatically changes colors according to the theme.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('toggleTheme');
+    const toggleKnob = document.getElementById('toggleKnob');
+    const html = document.documentElement;
+
+    toggleButton.addEventListener('click', () => {
+      html.classList.toggle('dark');
+
+      // Slide the knob
+      toggleKnob.classList.toggle('translate-x-8');
+    });
+  </script>
+
+</body>
+</html>

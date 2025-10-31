@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+</head>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body
+{
+font-family: Arial, sans-serif;
+}
+nav
+{
+    background: rgb(157, 216, 187);
+}
+nav ul
+{
+    display: flex;
+    list-style: none;
+    
+    align-items: center;
+}
+nav ul li
+{
+    position: relative;
+}
+nav ul li a
+{
+    padding:14px 20px;
+    display: block;
+    text-decoration: none;
+    color:black;
+}
+nav ul li a:hover,
+nav ul li a:focus
+{
+    background: rgb(110, 151, 131);
+}
+nav ul li:first-child a
+{
+    color:rgb(124, 121, 121);
+}
+nav ul li >ul
+{
+    display:none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 178px;
+    background: rgb(157, 216, 187);
+}
+nav ul li:hover > ul,
+nav ul li:focus-within >ul
+{
+    display: block;
+}
+</style>
+<body>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Animated Loader ▾</a>
+            <ul>
+                <li><a href="#">Spinner</a></li>
+                <li><a href="#">Pulse</a></li>
+                <li><a href="#">Bar</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Blog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<header>
+    <h1>KK Blogs</h1>
+    <p>Explore popular blogs that inspire, educate, and entertain.</p>
+  </header>
+  <main>
+    <section>
+      <article>
+        <header>
+          <h3>Morning Tea Notes</h3>
+          <p>By Priya Rao — <time datetime="2025-09-17">September 17, 2025</time></p>
+        </header>
+        <figure>
+          <img src="./images/post1.jpeg" alt="Image">
+          <figcaption>Comfort in a cup.</figcaption>
+        </figure>
+        <p>Short entry about enjoying a quiet morning with a cup of tea, a notebook, and a pen.</p>
+      </article>
+<hr/>
+      <article>
+        <header>
+          <h3>Windowsill Herbs</h3>
+          <p>By Arun Patel — <time datetime="2025-08-25">August 25, 2025</time></p>
+        </header>
+        <figure>
+          <img src="./images/post2.jpeg" alt="Potted herbs on a windowsill">
+          <figcaption>Small pots, big flavor.</figcaption>
+        </figure>
+        <p>Tips for starting a tiny herb garden on a sunny windowsill — basil, mint, and coriander work well.</p>
+      </article>
+    </section>
+<hr/>
+    <aside>
+      <h2>About</h2>
+      <p>A tiny blog</p>
+    </aside>
+<hr/>
+    <section>
+      <h2>Leave a comment</h2>
+      <form>
+        <p>
+          <label for="name">Name</label><br>
+          <input id="name" name="name" type="text" required>
+        </p>
+        <p>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" required>
+        </p>
+        <p>
+          <label for="blogpost">Comment for</label><br>
+          <select id="blogpost" name="blogpost">
+            <option value="post-1">Morning Tea Notes</option>
+            <option value="post-2">Windowsill Herbs</option>
+          </select>
+        </p>
+        <p>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </p>
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Simple Blog</p>
+  </footer>
+
+</body>
+</html>

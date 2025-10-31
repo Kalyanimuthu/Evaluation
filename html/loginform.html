@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body style="background-color: blanchedalmond;">
+<center>
+<h2>Login and Signup Form</h2>
+    <form>
+        <fieldset>
+        <legend>Signup</legend>
+        <table>
+            <tr>
+                <td><label>First Name</label></td>
+                <td><input type="text" name="firstname" id="firstname" placeholder="Enter FirstName"></td>
+            </tr>
+            <tr>
+                <td><label>Last Name</label></td>
+                <td><input type="text" name="lastname" id="lastname" placeholder="Enter LastName"></td>
+            </tr>
+            <tr>
+                <td><label>Email address</label></td>
+                <td><input type="email" name="email" id="email" placeholder="Enter email" required></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password" name="password" placeholder="Enter Password" id="password" required></td>
+            </tr>
+            <tr>
+                <td><label>Confirm Password</label></td>
+                <td><input type="password" name="password" placeholder="Confirm Password" id="password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit"></td>
+            </tr>
+            </table>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Login</legend>
+        
+        <table>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input type="text" name="username" id="username" placeholder="Enter your Name" required minlength="3" pattern="[A-Za-z0-9]+"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" name="password" placeholder="Enter your password" id="password" required></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="checkbox" name="checkbox"> Remember me?</td>
+                <td><button type="submit">Login</button></td>
+            </tr>
+        </table>
+        </fieldset>
+    </form>
+</center>
+</body>
+</html>
