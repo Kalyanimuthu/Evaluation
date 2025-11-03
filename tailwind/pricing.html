@@ -1,82 +1,110 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tailwind Pricing Component</title>
-  <link href="./output.css" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#111827',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body class="bg-gray-100">
 
-    <!-- Pricing Card -->
-   <h2 class="text-center font-black text-2xl my-10">Pricing Cards</h2>
+<body class="bg-gray-100 font-sans">
 
-    
-<div class="max-w-5xl sm:mx-auto py-16 grid gap-6 grid-cols-1 md:grid-cols-3">
+  <h2 class="text-center font-black text-3xl my-10 text-gray-800">
+    Pricing Cards
+  </h2>
+
+  <!-- Parent container -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Common card styles -->
+    <style>
+      /* Optional: Add subtle rounded animation */
+      .pricing-card:hover {
+        transform: scale(1.03);
+      }
+    </style>
 
     <!-- Basic Plan -->
-    <div class="bg-gray-900 pb-8 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300 transform">
-        <div class="bg-gradient-to-br from-rose-600 via-pink-800 to-purple-900 py-16 px-7 text-center rounded-br-full">
-            <h2 class="text-2xl font-black uppercase">Basic</h2>
-            <p class="text-6xl font-extrabold">$8.88</p>
-            <p class="text-xl font-bold text-white uppercase">USD Month</p>
-        </div>
-        <div class="p-8">
-            <p class="text-white mt-3 font-bold">1 User</p>
-            <p class="text-white mt-3 font-bold">5 Projects</p>
-            <p class="text-white mt-3 font-bold">10 GB Storage</p>
-            <p class="text-white mt-3 font-bold">Email Support</p>
-            <p class="text-white mt-3 font-bold">Dashboard</p>
-        </div>
-        <div class="flex justify-center items-center">
-            <button type="submit" class="mt-1 rounded-lg p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
-                <span class="block bg-gray-900 text-white uppercase font-bold rounded-lg px-6 py-2">Buy Now</span>
-            </button>
-        </div>
+    <div class="pricing-card bg-gray-900 w-[90%] sm:w-full mx-auto pb-8 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+      <div class="bg-gradient-to-br from-rose-600 via-pink-800 to-purple-900 py-14 px-6 text-center rounded-br-full">
+        <h2 class="text-2xl font-black uppercase text-white">Basic</h2>
+        <p class="text-5xl font-extrabold text-white">$8.88</p>
+        <p class="text-lg font-bold text-white uppercase">USD / Month</p>
+      </div>
+      <div class="p-8 text-white">
+        <p class="mt-3 font-bold">1 User</p>
+        <p class="mt-3 font-bold">5 Projects</p>
+        <p class="mt-3 font-bold">10 GB Storage</p>
+        <p class="mt-3 font-bold">Email Support</p>
+        <p class="mt-3 font-bold">Dashboard</p>
+      </div>
+      <div class="flex justify-center">
+        <button type="submit" class="mt-2 rounded-lg p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+          <span class="block bg-gray-900 text-white uppercase font-bold rounded-lg px-6 py-2">Buy Now</span>
+        </button>
+      </div>
     </div>
 
     <!-- Standard Plan -->
-    <div class="bg-gray-900 pb-8 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300 transform">
-        <div class="bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-800 py-16 px-7 text-center rounded-br-full">
-            <h2 class="text-2xl font-black uppercase">Standard</h2>
-            <p class="text-6xl font-extrabold">$29</p>
-            <p class="text-xl font-bold text-white uppercase">USD Month</p>
-        </div>
-        <div class="p-8">
-            <p class="text-white mt-3 font-bold">5 Users</p>
-            <p class="text-white mt-3 font-bold">20 Projects</p>
-            <p class="text-white mt-3 font-bold">50 GB Storage</p>
-            <p class="text-white mt-3 font-bold">Priority Support</p>
-            <p class="text-white mt-3 font-bold">Analytics Dashboard</p>
-        </div>
-        <div class="flex justify-center items-center">
-            <button type="submit" class="mt-1 rounded-lg p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
-                <span class="block bg-gray-900 text-white uppercase font-bold rounded-lg px-6 py-2">Buy Now</span>
-            </button>
-        </div>
+    <div class="pricing-card bg-gray-900 w-[90%] sm:w-full mx-auto pb-8 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+      <div class="bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-800 py-14 px-6 text-center rounded-br-full">
+        <h2 class="text-2xl font-black uppercase text-white">Standard</h2>
+        <p class="text-5xl font-extrabold text-white">$29</p>
+        <p class="text-lg font-bold text-white uppercase">USD / Month</p>
+      </div>
+      <div class="p-8 text-white">
+        <p class="mt-3 font-bold">5 Users</p>
+        <p class="mt-3 font-bold">20 Projects</p>
+        <p class="mt-3 font-bold">50 GB Storage</p>
+        <p class="mt-3 font-bold">Priority Support</p>
+        <p class="mt-3 font-bold">Analytics Dashboard</p>
+      </div>
+      <div class="flex justify-center">
+        <button type="submit" class="mt-2 rounded-lg p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+          <span class="block bg-gray-900 text-white uppercase font-bold rounded-lg px-6 py-2">Buy Now</span>
+        </button>
+      </div>
     </div>
 
     <!-- Premium Plan -->
-    <div class="bg-gray-900 pb-8 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300 transform">
-        <div class="bg-gradient-to-br from-emerald-400 via-emerald-700 to-emerald-900 py-16 px-7 text-center rounded-br-full">
-            <h2 class="text-2xl font-black uppercase">Premium</h2>
-            <p class="text-6xl font-extrabold">$59</p>
-            <p class="text-xl font-bold text-white uppercase">USD Month</p>
-        </div>
-        <div class="p-8">
-            <p class="text-white mt-3 font-bold">Unlimited Users</p>
-            <p class="text-white mt-3 font-bold">Unlimited Projects</p>
-            <p class="text-white mt-3 font-bold">200 GB Storage</p>
-            <p class="text-white mt-3 font-bold">24/7 Support</p>
-            <p class="text-white mt-3 font-bold">Advanced Analytics</p>
-        </div>
-        <div class="flex justify-center items-center">
-            <button type="submit" class="mt-1 rounded-lg p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
-                <span class="block bg-gray-900 text-white uppercase font-bold rounded-lg px-6 py-2">Buy Now</span>
-            </button>
-        </div>
+    <div class="pricing-card bg-gray-900 w-[90%] sm:w-full mx-auto pb-8 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+      <div class="bg-gradient-to-br from-emerald-400 via-emerald-700 to-emerald-900 py-14 px-6 text-center rounded-br-full">
+        <h2 class="text-2xl font-black uppercase text-white">Premium</h2>
+        <p class="text-5xl font-extrabold text-white">$59</p>
+        <p class="text-lg font-bold text-white uppercase">USD / Month</p>
+      </div>
+      <div class="p-8 text-white">
+        <p class="mt-3 font-bold">Unlimited Users</p>
+        <p class="mt-3 font-bold">Unlimited Projects</p>
+        <p class="mt-3 font-bold">200 GB Storage</p>
+        <p class="mt-3 font-bold">24/7 Support</p>
+        <p class="mt-3 font-bold">Advanced Analytics</p>
+      </div>
+      <div class="flex justify-center">
+        <button type="submit" class="mt-2 rounded-lg p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+          <span class="block bg-gray-900 text-white uppercase font-bold rounded-lg px-6 py-2">Buy Now</span>
+        </button>
+      </div>
     </div>
 
-</div>
-
+  </div>
 </body>
 </html>
